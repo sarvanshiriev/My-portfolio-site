@@ -11,6 +11,10 @@
         <div class="container">
             <div class="div nav-row">
                 <a href="./index.html" class="logo"><strong>Freelancer</strong> portfolio</a>
+                <button class="dark-mode-btn">
+                    <img src="./img/icons/Sun.svg" alt="Ligth mode" class="dark-mode-btn__icon">
+                    <img src="./img/icons/Moon.svg" alt="Dark mode" class="dark-mode-btn__icon">    
+                 </button>
                 <ul class="nav-list">
                     <li class="nav-list__item"><a href="./index.html" class="nav-list__link">Projects</a></li>
                     <li class="nav-list__item"><a href="./skills.html" class="nav-list__link">Skills</a></li>
@@ -64,30 +68,6 @@
             </div>
         </div>
     </footer>
-    <!-- <div class="codewars">
-    <h1>Мой уровень и каты на Codewars</h1>
-    <div id="codewars-info"></div>
-
-    <script>
-    const apiKey = '631b655e8c2b790017af66ed';
-    const username = 'sarvanshiriev';
-
-    fetch(`https://www.codewars.com/api/v1/users/${username}?access_key=${apiKey}`)
-      .then(response => response.json())
-      .then(data => {
-        const level = data.ranks.overall.name;
-        const katasCompleted = data.codeChallenges.totalCompleted;
-
-        const codewarsInfo = document.getElementById('codewars-info');
-        codewarsInfo.innerHTML = `
-          <p>Ваш уровень: ${level}</p>
-          <p>Каты выполнены: ${katasCompleted}</p>
-        `;
-      })
-      .catch(error => {
-        console.error('Ошибка при получении данных с Codewars API:', error);
-      });
-  </script>
-    </div> -->
+    <script src="./js/main.js"></script>
 </body>
 </html> 
