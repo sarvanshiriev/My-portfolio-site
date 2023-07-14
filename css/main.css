@@ -33,6 +33,7 @@ font-family: 'Poppins', sans-serif;
     --project-card-bg: var(--white);
     --project-card-text: var(--black);
     --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+    --swiper-theme-color: var(--accent) !important;
 }
 
 .dark {
@@ -141,7 +142,7 @@ html, body {
 }
 
 .nav-list__link:hover {
-    opacity: 0.8;
+    color: var(--accent);
 }
 
 .nav-list__link--active {
@@ -336,6 +337,7 @@ html, body {
     font-size: 24px;
     line-height: 1.3;
     color: var(--project-card-text);
+    margin-bottom: 25px;
 }
 
 /* Project details */
@@ -422,7 +424,55 @@ html, body {
     margin-top: 0.5em;
 }
 
-@media (max-width: 620px) {
+.social__item {
+    width: 38px;
+    height: 38px;
+    transition: 0.1s; /* Время эффекта */
+}
+.social__item:hover {
+        transform: scale(1.2); /* Увеличиваем масштаб */
+}
+
+/* Слайдер */
+
+  .swiper{
+    height: 100%;
+  }
+  .swiper-slide{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-slide img{
+  }
+  .swiper-button-next, .swiper-rtl .swiper-button-prev{
+    right: 40px !important; 
+    left: auto;
+    transition: 0.3s;
+    top: 48% !important;
+  }
+  .swiper-button-next:hover {
+    transform: scale(1.5);
+  }
+  .swiper-button-prev, .swiper-rtl .swiper-button-next{
+    left: 40px !important; 
+    right: auto;
+    transition: 0.3s;
+    top: 48% !important;
+  }
+  .swiper-button-prev:hover {
+    transform: scale(1.5);
+  }
+
+  .swiper-pagination-bullet-active {
+    transform: scale(1.3) !important;
+    background-color: var(--accent) !important;
+  }
+
+/* Мобильная версия */
+
+@media (min-width: 360px) {
 
     /* Header  */
 
@@ -469,7 +519,7 @@ html, body {
     .project__title {
         font-size: 22px;
     }
-
+  
     /* Project page */
 
     .project-details__desc {
@@ -491,6 +541,7 @@ html, body {
 
     .footer {
         padding: 40px 0 30px;
+        margin-top: 0;
     }
 
     .footer__wrapper {
@@ -504,7 +555,47 @@ html, body {
     }
 
     .social__item {
-        width: 28px;
+        width: 38px;
+        height: 38px;
+        transition: 0.1s; 
     }
 
+    .social__item:active {
+        transform: scale(1.2); 
+    }
+
+    /* Слайдер */
+    .swiper{
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+      }
+    .social__item:hover {
+        transform: scale(1); 
+    }
+    .swiper-button-next {
+        --swiper-navigation-size:30px !important;
+        top: 39% !important;
+        right: 25px !important;
+    }
+    .swiper-button-prev {
+        --swiper-navigation-size:30px !important;
+        top: 39% !important;
+        left: 25px !important;
+    }
+    .swiper-button-next:hover {
+        transform: scale(1);
+    }
+
+    .swiper-button-next:active {
+        transform: scale(1.5);
+    }
+
+    .swiper-button-prev:hover {
+        transform: scale(1);
+    }
+
+    .swiper-button-prev:active {
+        transform: scale(1.5);
+    }
 }
+
