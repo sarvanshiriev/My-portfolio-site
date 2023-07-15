@@ -1,5 +1,5 @@
 const btnDarkMode = document.querySelector('.dark-mode-btn');
-
+const nav = document.querySelector('.nav');
 //1.Проверка тёмной темы на уровне системных настроек 
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     btnDarkMode.classList.add('dark-mode-btn--active');
@@ -36,11 +36,20 @@ btnDarkMode.onclick = function () {
   const isDark = document.body.classList.toggle("dark");
 
   if(isDark) {
-    localStorage.setItem('darkMode','dark')
+    localStorage.setItem('darkMode','dark');
   } else {
     localStorage.setItem('darkMode','light');
   }
 };
+
+//Бургер
+let navToggle = document.querySelector('.nav__toggle');
+let navList = document.querySelector('.nav-list');
+
+navToggle.addEventListener('click', function(){
+	navToggle.classList.toggle('active');
+	navList.classList.toggle('active');
+})
 
 //Слайдер 
 var swiper = new Swiper(".mySwiper", {
@@ -55,3 +64,4 @@ var swiper = new Swiper(".mySwiper", {
   mousewheel: true,
   keyboard: true,
 });
+
