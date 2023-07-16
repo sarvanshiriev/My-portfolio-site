@@ -42,9 +42,6 @@ font-family: 'Poppins', sans-serif;
      /* Dark mode */
     --page-bg: #252526;
     --text-color: var(--white);
-
-    --title-1: var(--white);
-
     --project-card-bg: var(--black);
     --project-card-text: var(--white);
     --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.8);
@@ -76,7 +73,7 @@ html, body {
 }
 
 .section {
-    padding: 70px 0;
+    padding: 70px 15px;
 }
 
 .title-1 {
@@ -101,7 +98,7 @@ html, body {
 
 .nav {
     padding: 20px 0;
-    border-bottom: 1px solid var(--black-border);
+    border-bottom: 1px solid var(--text-color);
     background-color: var(--page-bg);
     color: var(--text-color);
     letter-spacing: normal;
@@ -139,7 +136,7 @@ html, body {
 }
 
 .nav-list__link {
-    color: var(--header-text);
+    color: var(--text-color);
     transition: opacity 0.2s ease-in;
 }
 
@@ -165,7 +162,9 @@ html, body {
 }
 
 /* Бургер */
-
+.nav__toggle {
+    display: none;
+}
 /* Dark mode btn */
 
 .dark-mode-btn {
@@ -173,7 +172,7 @@ html, body {
     position: relative;
     display: flex;
     justify-content: space-between;
-    width: 51px;
+    width: 52px;
     height: 28px;
     padding: 5px;
     border-radius: 50px;
@@ -427,6 +426,7 @@ html, body {
     height: 38px;
     transition: 0.1s; /* Время эффекта */
 }
+
 .social__item:hover {
         transform: scale(1.2); /* Увеличиваем масштаб */
 }
@@ -435,30 +435,36 @@ html, body {
 
   .swiper{
     height: 100%;
+    max-width: 600px;
   }
+
   .swiper-slide{
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   .swiper-slide img{
+
   }
+
   .swiper-button-next, .swiper-rtl .swiper-button-prev{
-    right: 40px !important; 
-    left: auto;
+    right: 20px !important; 
     transition: 0.3s;
-    top: 48% !important;
+    top: 130px !important;
   }
+
   .swiper-button-next:hover {
     transform: scale(1.5);
   }
+
   .swiper-button-prev, .swiper-rtl .swiper-button-next{
-    left: 40px !important; 
-    right: auto;
+    left: 20px !important; 
     transition: 0.3s;
-    top: 48% !important;
+    top: 130px !important;
   }
+
   .swiper-button-prev:hover {
     transform: scale(1.5);
   }
@@ -468,9 +474,17 @@ html, body {
     background-color: var(--accent) !important;
   }
 
+
+
+
+
+
+
+
+
 /* Мобильная версия */
 
-@media (min-width: 360px) {
+@media (max-width: 768px) {
 
     .logo {
         font-size: 20px;
@@ -491,6 +505,9 @@ html, body {
 
     /* Nav */
 
+    .nav {
+        min-width: 360px;
+    }
     .nav-row {
         column-gap: 0;
         justify-content: space-between;
@@ -498,7 +515,7 @@ html, body {
 
     .dark-mode-btn {
         order: 0;
-        margin-right: auto;
+        margin-right: 15px;
     }
 
     .nav-list__link--active::before {
@@ -516,6 +533,7 @@ html, body {
     }
     /* Бургер */
     .nav__toggle {
+        display: block;
         width: 30px;
 	    height: 30px;
 	    position: relative;
@@ -580,12 +598,13 @@ html, body {
     /* General */
 
     .section {
+        min-width: 360px;
         padding: 40px 0;
     }
 
     .title-1 {
         margin-bottom: 30px;
-        font-size: 40px;
+        font-size: 36px;
     }
 
     .title-2 {
@@ -600,7 +619,10 @@ html, body {
     }
   
     /* Project page */
-
+    .project__img {
+        width: 300px;
+    }
+    
     .project-details__desc {
         margin-bottom: 20px;
         font-size: 22px;
@@ -619,6 +641,7 @@ html, body {
     /* Footer */
 
     .footer {
+        min-width: 360px;
         padding: 40px 0 30px;
         margin-top: 0;
     }
@@ -645,21 +668,20 @@ html, body {
 
     /* Слайдер */
     .swiper{
-        padding-left: 50px !important;
-        padding-right: 50px !important;
+        width: 360px;
       }
     .social__item:hover {
         transform: scale(1); 
     }
     .swiper-button-next {
         --swiper-navigation-size:30px !important;
-        top: 33% !important;
-        right: 25px !important;
+        top: 35% !important;
+        right: 5px !important;
     }
     .swiper-button-prev {
         --swiper-navigation-size:30px !important;
-        top: 33% !important;
-        left: 25px !important;
+        top: 35% !important;
+        left: 5px !important;
     }
     .swiper-button-next:hover {
         transform: scale(1);
