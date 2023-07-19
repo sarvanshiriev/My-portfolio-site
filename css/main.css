@@ -326,7 +326,8 @@ html, body {
 
 .project__img {
     border-radius: 10px;
-    height: 450px;
+    max-width: 80%;
+    height: auto;
 }
 
 .project__title {
@@ -494,6 +495,7 @@ html, body {
 
     .header {
         min-height: unset;
+        margin: auto;
     }
 
     .header__title {
@@ -598,9 +600,9 @@ html, body {
     /* General */
 
     .section {
-        min-width: 360px;
         padding: 40px 0;
-        margin: auto;
+        margin-top: auto;
+        margin-bottom: auto;
     }
 
     .title-1 {
@@ -620,10 +622,6 @@ html, body {
     }
   
     /* Project page */
-    .project__img {
-        width: 300px;
-        height: 190px;
-    }
     
     .project-details__desc {
         margin-bottom: 20px;
@@ -670,7 +668,7 @@ html, body {
 
     /* Слайдер */
     .swiper{
-        width: 360px;
+        max-width: 768px;
       }
     .social__item:hover {
         transform: scale(1); 
