@@ -326,6 +326,7 @@ html, body {
 
 .project__img {
     border-radius: 10px;
+    height: 450px;
 }
 
 .project__title {
@@ -435,7 +436,7 @@ html, body {
 
   .swiper{
     height: 100%;
-    max-width: 600px;
+    max-width: 1000px;
   }
 
   .swiper-slide{
@@ -450,9 +451,9 @@ html, body {
   }
 
   .swiper-button-next, .swiper-rtl .swiper-button-prev{
-    right: 20px !important; 
+    right: 4px !important; 
     transition: 0.3s;
-    top: 130px !important;
+    top: 210px !important;
   }
 
   .swiper-button-next:hover {
@@ -460,9 +461,9 @@ html, body {
   }
 
   .swiper-button-prev, .swiper-rtl .swiper-button-next{
-    left: 20px !important; 
+    left: 4px !important; 
     transition: 0.3s;
-    top: 130px !important;
+    top: 210px !important;
   }
 
   .swiper-button-prev:hover {
@@ -599,6 +600,7 @@ html, body {
     .section {
         min-width: 360px;
         padding: 40px 0;
+        margin: auto;
     }
 
     .title-1 {
@@ -620,6 +622,7 @@ html, body {
     /* Project page */
     .project__img {
         width: 300px;
+        height: 190px;
     }
     
     .project-details__desc {
