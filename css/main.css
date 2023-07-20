@@ -504,6 +504,10 @@ html, body {
     margin-right: 5px;
     margin-bottom: 5px;
   }
+  .section__item:nth-child(5) {
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+  }
 
   /* Стили для модального окна */
 .section__modal {
@@ -776,8 +780,8 @@ html, body {
     /* Skills */
 
     .section__img {
-        max-height: 270px;
-        max-width: 330px;
+        max-height: 135px;
+        max-width: 165px;
         border-radius: 6px;
     }
 }
