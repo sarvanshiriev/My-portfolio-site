@@ -536,6 +536,56 @@ html, body {
     border-radius: 6px;
   }
 
+  .skills-slide {
+    display: flex;
+    animation: 35s slide infinite linear;
+    margin-right: 50px;
+    max-width: 1200px;
+    padding: 0 15px;
+  }
+  .skills-slide img{
+    height: 40px;
+    margin-right: 50px;
+  }
+
+  .skills:hover .skills-slide {
+    animation-play-state: paused;
+  }
+  .skills {
+    display: flex;
+    max-width: 1200px;
+    padding: 0 15px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 40px;
+  }
+  .skills:before,
+  .skills:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.skills:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--page-bg));
+}
+
+.skills:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--page-bg));
+}
+  @keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+  }
   /* Стили для модального окна */
 .section__modal {
     display: none;
@@ -816,6 +866,20 @@ html, body {
         max-height: 135px;
         max-width: 165px;
         border-radius: 6px;
+    }
+
+    .skills-slide {
+        max-width: 768px;
+    }
+
+    .skills:before,
+    .skills:after {
+     width: 80px;
+    }
+
+    .skills-slide img{
+        height: 20px;
+        margin-right: 25px;
     }
 }
 
