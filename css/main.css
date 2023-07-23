@@ -1,9 +1,11 @@
 @import "./reset.css";
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Rubik:wght@900&family=Titillium+Web:wght@400;600&display=swap');
+
 
 /*
 font-family: 'DM Sans', sans-serif;
 font-family: 'Poppins', sans-serif;
+font-family: 'Anonymous Pro', monospace;
 */
 
 /* * {
@@ -52,7 +54,7 @@ html, body {
     flex-direction: column;
     min-height: 100vh;
 
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Anonymous Pro', monospace;
     letter-spacing: -0.5px;
 
     /* Light mode */
@@ -74,7 +76,7 @@ html, body {
 }
 
 .section {
-    padding: 70px 15px;
+    padding: 30px 15px;
 }
 
 .title-1 {
@@ -95,6 +97,11 @@ html, body {
 }
 
 /* Nav */
+.nav__container {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1200px;
+}
 
 .nav {
     padding: 20px 0;
@@ -117,7 +124,7 @@ html, body {
     margin-right: auto;
     color: var(--text-color);
     font-size: 24px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Anonymous Pro', monospace;
 }
 
 .logo strong {
@@ -132,7 +139,7 @@ html, body {
     column-gap: 40px;
     font-size: 16px;
     font-weight: 500;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Anonymous Pro', monospace;
 }
 
 .nav-list__link {
@@ -354,7 +361,7 @@ html, body {
 }
 .breadcrumb__item:not(:last-child) {
     margin-right: 10px;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Anonymous Pro', monospace;
     font-weight: 500;
 }
 .breadcrumb__item a {
