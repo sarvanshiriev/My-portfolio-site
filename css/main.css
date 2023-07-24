@@ -229,14 +229,89 @@ html, body {
 
 .header__wrapper {
     padding: 0 15px;
-    max-width: 660px;
+    max-width: 768px;
+    text-align: center;
 }
-
+.header__content {
+    display: inline-block; /* Делаем обертку в виде блока с размером контента */
+    text-align: left; /* Устанавливаем выравнивание текста внутри обертки слева */
+}
 .header__title {
-    margin-bottom: 20px;
+    width: 48ch;
+    margin:0 auto 20px auto;
     font-size: 20px;
     font-weight: 700;
     line-height: 1.4;
+    animation: printed-text 4s steps(21),
+    flashing-border-top 0.5s step-end infinite,
+    fading-border 0.75s 4s forwards;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid var(--accent);
+    text-align: center;
+}
+.header__description {
+    margin: 0 auto;
+    width: 53ch;
+    font-size: 20px;
+    animation: printed-text-2 8s steps(53),
+    flashing-border-bottom 0.5s step-end infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid var(--accent);
+    visibility: hidden;
+}
+
+@keyframes printed-text {
+    from {
+        width: 0;
+    }
+    to {width: 100%;}
+}
+
+@keyframes printed-text-2 {
+    0% {width: 0;}
+    50% {width: 0;}
+    100% {width: 100;}
+}
+
+@keyframes fading-border {
+    0% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: transparent;
+    }
+}
+
+@keyframes flashing-border-top {
+    0%, 25% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: var(--accent);
+    }
+    100% {
+        border-color: transparent;
+    }
+}
+
+@keyframes flashing-border-bottom {
+    0% {
+        border-color: transparent;
+    }
+    25% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: var(--accent);
+    }
+    75% {
+        border-color: var(--accent);
+    }
+    100% {
+        border-color: transparent;
+    }
 }
 
 .header__title strong {
@@ -245,30 +320,12 @@ html, body {
 }
 
 .header__title em {
+    font-size: 50px;
     font-style: normal;
     color: var(--accent);
 }
-.header__title p{
-    /* border-right: .15em solid var(--accent);  */
-    overflow: hidden;
-    white-space: nowrap;
-    animation: typing 5s steps(60, end);
-      /* blink-caret 1s step-end infinite; */
-  }
-  .header__title p:nth-child(2){
-    animation: typing-2 8s steps(60, end);
-  }
-  /* The typing effect */
-  /* @keyframes typing {
-    from { width: 0 ;}
-  } */
-  
-  /* The typewriter cursor effect */
-  /* @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: var(--accent) }
-  } */
-    .header__text {
+
+.header__text {
     margin-bottom: 40px;
     font-size: 18px;
     line-height: 1.333;
@@ -729,13 +786,18 @@ html, body {
         min-height: unset;
         margin: auto;
     }
-
     .header__title {
-        font-size: 30px;
+        width: 100%;
     }
-
+    .header__title em {
+        font-size: 26px;
+    }
+    .header__description {
+        font-size: 16px;
+        display: none;
+    }
     .header__title strong {
-        font-size: 40px;
+        font-size: 24px;
     }
 
     /* Nav */
