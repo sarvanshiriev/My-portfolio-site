@@ -248,6 +248,7 @@ html, body {
     border-right: 4px solid var(--accent);
     text-align: center;
 }
+
 .header__description {
     margin: 0 auto;
     width: 53ch;
@@ -781,7 +782,6 @@ html, body {
     /* Header  */
 
     .header {
-        min-height: unset;
         display: block;
 
     }
@@ -800,7 +800,10 @@ html, body {
     }
     .header__description {
         font-size: 16px;
-        display: none;
+        width: 38ch;
+        white-space: normal;
+        border: none;
+        margin-bottom: 20px;
     }
     .header__title strong {
         font-size: 24px;
@@ -882,7 +885,7 @@ html, body {
     }
     
     .nav-list.active {
-        position: fixed;
+        position: absolute;
         display: flex;
         flex-direction: column;
 	    top: 75px;
@@ -948,12 +951,12 @@ html, body {
 
     .footer {
         min-width: 360px;
-        padding: 40px 0 30px;
+        padding: 20px 0 20px;
         margin-top: 0;
     }
 
     .footer__wrapper {
-        row-gap: 20px;
+        row-gap: 15px;
     }
 
     /* Social */
