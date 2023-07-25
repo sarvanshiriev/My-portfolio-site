@@ -212,23 +212,21 @@ html, body {
 
 .header {
     padding: 40px 0;
-    min-height: 695px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     background-color: var(--page-bg);
     background-repeat: no-repeat;
     background-size: auto;
     background-position: center center;
-
     color: var(--text-color);
     text-align: center;
+    margin: auto;
 }
 
 .header__wrapper {
     padding: 0 15px;
+    min-width: 610px;
     max-width: 768px;
     text-align: center;
 }
@@ -784,7 +782,15 @@ html, body {
 
     .header {
         min-height: unset;
-        margin: auto;
+        display: block;
+
+    }
+    .header__wrapper {
+        min-width: 360px;
+    }
+    .lottie-container {
+        width: 300px;
+        margin: 0 auto;
     }
     .header__title {
         width: 100%;
