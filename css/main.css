@@ -788,8 +788,8 @@ html, body {
     .header__wrapper {
         min-width: 360px;
     }
-    .lottie-container {
-        width: 300px;
+    .header__lottie {
+        width: 250px;
         margin: 0 auto;
     }
     .header__title {
