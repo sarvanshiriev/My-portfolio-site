@@ -808,6 +808,7 @@ html, body {
     }
     .header__wrapper {
         min-width: 360px;
+        padding: 0;
     }
     .header__lottie {
         width: 250px;
@@ -981,7 +982,7 @@ html, body {
         margin-right: 0;
     }
     .swiper-container {
-        margin: 30px auto 0 auto;
+        margin: 30px auto 30px auto;
     }
     /* Footer */
 

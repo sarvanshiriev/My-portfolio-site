@@ -51,6 +51,14 @@ navToggle.addEventListener('click', function(){
 	navList.classList.toggle('active');
 })
 
+document.addEventListener("click", function(event) {
+  const targetElement = event.target; 
+  if (!targetElement.closest(".nav-list") && !targetElement.closest(".nav__toggle")) {
+    navList.classList.remove("active");
+    navToggle.classList.remove("active");
+  }
+});
+
 //Слайдер 
 var swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
