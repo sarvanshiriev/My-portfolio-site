@@ -671,10 +671,17 @@ html, body {
   }
 
   /* About*/
-  .about {
+  .about-me {
+    display: flex;
     max-width: 1200px;
-    margin: 0 auto;
+    margin-top:150px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0 15px;
+  }
+  .about {
+    max-width: 900px;
+    margin-right: 40px;
   }
   .about__wrapper {
     max-height: 150px;
@@ -721,6 +728,20 @@ html, body {
   border-radius: 4px;
   margin-top: 15px;
   }
+
+  .swiper-container {
+    width: 200px;
+    height: 266px;
+    margin-top: 88px;
+  }
+  
+  .swiper-slide {
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    text-align: center;
+  }
+ 
 /* Стили для модального окна */
 .section__modal {
     display: none;
@@ -947,6 +968,21 @@ html, body {
         font-size: 16px;
     }
 
+    /* About */
+    .about-me {
+        display: block;
+        max-width: 768px;
+        margin-top:50px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 20px;
+    }
+    .about {
+        margin-right: 0;
+    }
+    .swiper-container {
+        margin: 30px auto 0 auto;
+    }
     /* Footer */
 
     .footer {
