@@ -549,7 +549,12 @@ html, body {
     max-width: 1000px;
     padding-top: 7px !important;
   }
-
+  .swiper-slide {
+    border-radius: 10px;
+    font-size: 24px;
+    text-align: center;
+  }
+  
   .swiper-slide{
     text-align: center;
     display: flex;
@@ -735,12 +740,6 @@ html, body {
     margin-top: 88px;
   }
   
-  .swiper-slide {
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    font-size: 24px;
-    text-align: center;
-  }
  
 /* Стили для модального окна */
 .section__modal {
