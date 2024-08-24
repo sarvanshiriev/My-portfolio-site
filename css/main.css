@@ -806,7 +806,7 @@ html, body {
 
     }
     .header__wrapper {
-        min-width: 360px;
+        min-width: 320px;
         padding: 0;
     }
     .header__lottie {
@@ -833,7 +833,7 @@ html, body {
     /* Nav */
 
     .nav {
-        min-width: 360px;
+        min-width: 320px;
     }
     .nav-row {
         column-gap: 0;
@@ -986,8 +986,8 @@ html, body {
     /* Footer */
 
     .footer {
-        min-width: 360px;
-        padding: 20px 0 20px;
+        min-width: 320px;
+        padding: 20px 0;
         margin-top: 0;
     }
 
